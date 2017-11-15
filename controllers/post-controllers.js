@@ -11,6 +11,7 @@ function get(req, res, next) {
 }
 
 function create(req, res, next) {
+    console.log('cont body: ', req.body)
     Post.create(req.body).then(post => {
         res.status(201).json({ post })
     })

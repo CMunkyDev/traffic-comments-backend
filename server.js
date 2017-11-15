@@ -1,11 +1,11 @@
 const express = require('express')
 const app = express()
 const router = express.Router();
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 3000
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const cors = require('cors')
-const { PostRouter } = require('./routes')
+const { PostRouter , MakeRouter } = require('./routes')
 
 app.disable('x-powered-by')
 
@@ -15,6 +15,7 @@ app.use(morgan('dev'))
 
 
 app.use('/posts', PostRouter)
+app.use('/makes', MakeRouter)
 //app.use('/lists', ListRouter)
 
 app.use((err, req, res, next) => {
