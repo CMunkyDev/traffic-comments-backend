@@ -24,7 +24,7 @@ function find(id) {
     return knex('posts')
         .leftJoin('car_makes', 'car_makes.id', 'self_car_make_id')
         .leftJoin('car_makes as car_makes_2', 'car_makes_2.id', 'other_car_make_id')
-        .select('title', 'content', 'self_transportation_index as self_transport', 'car_makes.name as self_make', 'self_car_model as self_model', 'self_car_year as self_year', 'self_car_color as self_color', 'other_transportation_index as other_transport', 'car_makes_2.name as other_make', 'other_car_model as other_model', 'other_car_color as other_color', 'post_type_index as post_type', 'created_at', 'updated_at')
+        .select('title', 'content', 'self_transportation_index as self_transport', 'car_makes.name as self_make', 'self_car_model as self_model', 'self_car_year as self_year', 'self_car_color as self_color', 'other_transportation_index as other_transport', 'car_makes_2.name as other_make', 'other_car_model as other_model', 'other_car_color as other_color', 'post_type_index as post_type', 'created_at', 'updated_at', 'posts.id')
         .where('posts.id', id)
         .first()
 }
