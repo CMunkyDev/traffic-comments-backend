@@ -56,8 +56,11 @@ function prune(req, res, next) {
 }
 
 function complete(req, res, next) {
-    const errors = requiredFields.filter(field => !req.body[field])
+  console.log(req.body)
+    const errors = requiredFields.filter(field => !req.body[field] && req.body[field] != 0 && req.body[field] != false )
         .map(key => `${key} is a required field.`)
+
+    console.log(errors)
 
     if (errors.length) {
         const status = 400

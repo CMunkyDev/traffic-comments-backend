@@ -1,5 +1,5 @@
 const knex = require('../db/connection.js')
-const { transportTypeArr: transTypeList, postTypeArr: postTypeList} = require('../db/lists.js')
+const { transportTypeArr: transTypeList, postTypeArr: postTypeList } = require('../db/lists.js')
 
 function get() {
     return knex('posts')
