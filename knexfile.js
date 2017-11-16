@@ -24,9 +24,9 @@ module.exports = {
       directory: path.join(__dirname, 'db', 'seeds')
     }
   },
-  
+
   production: {
-    client: 'pg',
+    client: 'postgresql',
     connection: process.env.DATABASE_URL,/*
     pool: {
       afterCreate: function (conn, done) {
@@ -49,4 +49,3 @@ module.exports = {
     }
   }
 }
-

@@ -1,5 +1,5 @@
 const { PostModels: Post } = require('../models')
-const optionalFields = ['self_car_make_id', 'self_car_model', 'self_car_year', 'self_car_color', 'other_car_make_id', 'other_car_model', 'other_car_color']
+const optionalFields = ['self_car_make_id', 'self_car_model', 'self_car_year', 'self_car_color', 'other_car_make_id', 'other_car_model', 'other_car_color', 'location', 'date']
 const requiredFields = ['title', 'content', 'self_transportation_index', 'other_transportation_index', 'post_type_index']
 const allFields = requiredFields.concat(optionalFields)
 

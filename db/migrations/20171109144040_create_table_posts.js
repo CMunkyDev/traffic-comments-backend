@@ -14,6 +14,8 @@ exports.up = knex => {
       table.string('other_car_model').defaultsTo('')
       table.string('other_car_color').defaultsTo('')
       table.integer('post_type_index').notNullable()
+      table.string('location').defaultsTo('')
+      table.string('date').defaultsTo('')
     //   knex.raw(`CHECK self_transportation_index > -1`)
     //   knex.raw(`CHECK self_transportation_index < ${transportTypeArr.length}`)
     //   knex.raw(`CHECK other_transportation_index > -1`)
